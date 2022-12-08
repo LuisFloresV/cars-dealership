@@ -1,8 +1,6 @@
-import { IsOptional, IsString, IsUUID, MinLength } from 'class-validator';
-
+import { IsOptional, IsString, MinLength } from 'class-validator';
 
 export class UpdateCarDto {
-
   @IsString()
   @IsOptional()
   readonly brand?: string;
@@ -11,5 +9,4 @@ export class UpdateCarDto {
   @MinLength(3)
   @IsOptional()
   readonly model?: string;
-
 }
